@@ -1,0 +1,126 @@
+
+:root {
+    --primary: darkblue;
+    --accent: orange;
+    --background: lightgray;
+    --text: black;
+}
+
+/* Body */
+body {
+    margin: 0;
+    padding-top: 120px;
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+/* Navigation */
+header {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* Sections */
+section {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Hero Section */
+body > section:first-of-type {
+    background: linear-gradient(to right, darkblue, blue);
+    color: white;
+    text-align: center;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+/* Form */
+input, select {
+    padding: 8px;
+    margin: 5px;
+}
+
+/* Buttons */
+button {
+    background-color: var(--accent);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.champions {
+    text-align: center;
+    background: linear-gradient(to right, #8b0000, #e32636);
+    color: white;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.champions h2 {
+    color: #ffcc33;
+    font-size: 32px;
+}
+
+.champions img {
+    width: 90%;
+    max-width: 850px;
+    height: auto;
+    border: 3px solid #ffcc33;
+    border-radius: 12px;
+}
+
+.champions p {
+    font-size: 18px;
+}
+
+.champions h3 {
+    color: white;
+}
