@@ -1,6 +1,6 @@
 
 :root {
-    --primary: darkblue;
+    --primary: blue;
     --accent: orange;
     --background: lightgray;
     --text: black;
@@ -123,4 +123,47 @@ footer {
 
 .champions h3 {
     color: white;
+}
+
+/* Booking Form Alignment */
+#booking {
+    text-align: center;
+}
+
+#booking h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#booking form {
+    margin: 0 auto;
+}
+
+/* Align labels */
+#booking form > label {
+    display: inline-block;
+    width: 190px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+/* Make input fields and dropdowns equal in width */
+#booking form > input:not([type="radio"]),
+#booking form > select {
+    width: 270px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+/* Radio button labels */
+#booking form > label[for="online"],
+#booking form > label[for="counter"] {
+    width: auto;
+    text-align: left;
+    margin-right: 10px;
+}
+
+/* Center buttons */
+#booking form > button {
+    margin: 10px;
 }
