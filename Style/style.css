@@ -110,7 +110,7 @@ footer {
 }
 
 .champions img {
-    width: 90%;
+    width: 100%;
     max-width: 850px;
     height: auto;
     border: 3px solid #ffcc33;
