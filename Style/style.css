@@ -9,7 +9,7 @@
 /* Body */
 body {
     margin: 0;
-    padding-top: 120px;
+    padding-top: 0px;
     font-family: Arial, sans-serif;
     background-color: var(--background);
     color: var(--text);
@@ -202,5 +202,574 @@ footer {
     }
     to {
         opacity: 0;
+    }
+}
+.booking-summary {
+    margin: 25px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.booking-summary h2 {
+    color: blue;
+}
+
+.booking-summary h3 {
+    color: green;
+}
+
+#toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#toast.show {
+    opacity: 1;
+}
+
+
+/* Activity 8: Responsive Layout */
+
+/* Navigation Bar */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 15px 30px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Match Cards - CSS Grid */
+
+
+/* ===== IPL MATCH SECTION REDESIGN ===== */
+
+#matches {
+    background: #f4f6fb;
+    padding: 35px;
+    border-radius: 16px;
+}
+
+#matches h2 {
+    color: #14213d;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Filter and view controls */
+
+#teamFilter {
+    padding: 11px 16px;
+    border: 1px solid #d5dbea;
+    border-radius: 8px;
+    background: white;
+    font-size: 15px;
+}
+
+.view-controls {
+    margin: 20px 0;
+}
+
+.view-controls button {
+    background: #14213d;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.view-controls button:hover {
+    background: #f59e0b;
+    color: #14213d;
+}
+
+/* Match grid */
+
+.match-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+/* Individual match card */
+
+.match-card {
+    background: linear-gradient(145deg, #14213d, #243b64);
+    color: white;
+    padding: 25px 20px;
+    border-radius: 15px;
+    border: 1px solid #34496d;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(20, 33, 61, 0.12);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.match-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(20, 33, 61, 0.22);
+}
+
+.match-card h3 {
+    color: #fbbf24;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 18px;
+}
+
+.match-card h2 {
+    color: white !important;
+    font-size: 25px !important;
+    margin: 0 0 22px !important;
+}
+
+.match-card p {
+    font-size: 15px;
+    color: #e0e7f3;
+    margin: 13px 0;
+    line-height: 1.5;
+}
+
+/* Book Now button */
+
+.match-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 28px;
+    background: #f59e0b;
+    color: #14213d;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.match-card a:hover {
+    background: #ffffff;
+    color: #14213d;
+}
+
+/* List view */
+
+.match-container.list-view {
+    grid-template-columns: 1fr;
+}
+
+.match-container.list-view .match-card {
+    text-align: left;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .match-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    #matches {
+        padding: 18px;
+        margin: 12px;
+    }
+
+    .match-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .match-card {
+        padding: 22px 16px;
+    }
+}
+
+/* List View */
+
+.match-container.list-view {
+    grid-template-columns: 1fr;
+}
+
+.match-container.list-view .match-card {
+    text-align: left;
+}
+
+/* Grid and List Buttons */
+
+.view-controls {
+    margin-top: 15px;
+}
+
+.view-controls button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+/* ===== PREMIUM TICKET BOOKING SECTION ===== */
+
+#booking {
+    background: #f1f5fb;
+    padding: 40px 30px;
+    border-radius: 16px;
+}
+
+#booking h2 {
+    text-align: center;
+    color: #14213d;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+/* Form and summary layout */
+
+.booking-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Booking form */
+
+#booking form {
+    flex: 1;
+    max-width: 500px;
+    padding: 30px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(20, 33, 61, 0.08);
+}
+
+#booking form label {
+    display: inline-block;
+    width: 145px;
+    text-align: right;
+    margin: 12px 10px 12px 0;
+    color: #263752;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#booking form input:not([type="radio"]),
+#booking form select {
+    width: 230px;
+    max-width: calc(100% - 165px);
+    padding: 12px;
+    border: 1px solid #d5ddeb;
+    border-radius: 7px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background: #f9fbff;
+}
+
+#booking form input:focus,
+#booking form select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Book Now button */
+
+#booking form button {
+    display: block;
+    margin: 25px auto 0;
+    padding: 13px 35px;
+    background: #f59e0b;
+    color: #14213d;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#booking form button:hover {
+    background: #14213d;
+    color: white;
+}
+
+/* Booking summary card */
+
+#booking .booking-summary {
+    flex: 1;
+    max-width: 450px;
+    margin: 0;
+    padding: 30px;
+    background: linear-gradient(145deg, #14213d, #243b64);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(20, 33, 61, 0.16);
+    text-align: center;
+}
+
+#booking .booking-summary h2 {
+    color: #fbbf24;
+    font-size: 25px;
+    margin: 10px 0 25px;
+}
+
+#booking .booking-summary p {
+    color: #e5eaf3;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+#booking .booking-summary h3 {
+    color: #fbbf24;
+    font-size: 23px;
+    margin-top: 28px;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 768px) {
+
+    #booking {
+        padding: 25px 15px;
+    }
+
+    .booking-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    #booking form,
+    #booking .booking-summary {
+        width: 100%;
+        max-width: 450px;
+        box-sizing: border-box;
+    }
+
+    #booking form label {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin: 12px 0 5px;
+    }
+
+    #booking form input:not([type="radio"]),
+    #booking form select {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* Guidelines - CSS Grid */
+
+.guidelines-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* ===== IPL GUIDELINES SECTION ===== */
+
+#guidelines {
+    background: #f1f5fb;
+    padding: 40px 30px;
+    border-radius: 16px;
+}
+
+#guidelines h2 {
+    text-align: center;
+    color: #14213d;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* Guidelines grid */
+
+.guidelines-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* Individual cards */
+
+.guideline-card {
+    background: white;
+    padding: 28px 22px;
+    border-radius: 14px;
+    border-top: 5px solid #f59e0b;
+    box-shadow: 0 5px 18px rgba(20, 33, 61, 0.08);
+    text-align: center;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.guideline-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(20, 33, 61, 0.15);
+}
+
+.guideline-card h3 {
+    color: #14213d;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.guideline-card p {
+    color: #586579;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .guidelines-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    #guidelines {
+        padding: 25px 15px;
+    }
+
+    .guidelines-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .guideline-card {
+        padding: 22px 18px;
+    }
+}
+
+
+/* Tablet Responsive Layout */
+
+@media (max-width: 900px) {
+
+    .match-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .guidelines-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* Mobile Responsive Layout */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        padding: 15px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .match-container {
+        grid-template-columns: 1fr;
+    }
+
+    .guidelines-container {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .booking-container form,
+    .booking-summary {
+        width: 100%;
+        max-width: 400px;
+    }
+
+}
+
+/* HAMBURGER MENU FIX */
+
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .nav-menu.active {
+        display: flex;
     }
 }
